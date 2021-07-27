@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "iconfont";
+  src: url("./iconfont/iconfont.eot");
+  src: url("./iconfont/iconfont.eot?#iefix") format("embedded-opentype"),
+    url("./iconfont/iconfont.woff2") format("woff2"),
+    url("./iconfont/iconfont.woff") format("woff"),
+    url("./iconfont/iconfont.ttf") format("truetype"),
+    url("./iconfont/iconfont.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  z-index: 111;
+  height: 128px;
+  position: absolute;
+  min-width: 700px;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background:#151E23;
+  padding: 0 100px;
+  &.headerActive {
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0) 0%,
+      rgba(84, 84, 84, 0) 100%
+    );
+    background: -webkit-gradient(
+      linear,
+      top,
+      bottom,
+      color-stop(0%, rgba(0, 0, 0)),
+      color-stop(100%, rgba(84, 84, 84))
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0) 0%,
+      rgba(84, 84, 84, 0) 100%
+    );
+    background: -o-linear-gradient(
+      top,
+      rgba(0, 0, 0) 0%,
+      rgba(84, 84, 84, 0) 100%
+    );
+    background: -ms-linear-gradient(
+      top,
+      rgba(0, 0, 0) 0%,
+      rgba(84, 84, 84, 0) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0) 0%,
+      rgba(84, 84, 84, 0) 100%
+    );
+  }
+  .nav-left {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .nav-png {
+      width: 66px;
+      height: 50.3px;
+      margin-right: 1.6vw;
+    }
+    div {
+      h1 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      span {
+        color: #fff;
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+  }
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    div {
+      margin-right: 5vw;
+      font-weight: 400;
+      font-size: 24px;
+      opacity: 1;
+      line-height: 61px;
+      color: #fff;
+      transition: all 0.3s;
+      &.active-exact {
+        color: #ff6e00;
+      }
+      &:hover {
+        cursor: pointer;
+        color: #ff6e00;
+      }
+      &.active {
+        opacity: 0;
+        margin-right: 0;
+      }
+    }
+    div:last-of-type {
+      transition: all 0.3s;
+      &.active {
+        opacity: 0;
+        margin-left: 0;
+      }
+    }
+    .iconfont {
+      margin-left: 3vw;
+      font-family: "iconfont" !important;
+      font-size: 46px;
+      line-height: 61px;
+      color: #fff;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: all 0.3s;
+      &:hover {
+        cursor: pointer;
+        color: #ff6e00;
+      }
+      &.iconfontAct {
+        color: #ff6e00;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
